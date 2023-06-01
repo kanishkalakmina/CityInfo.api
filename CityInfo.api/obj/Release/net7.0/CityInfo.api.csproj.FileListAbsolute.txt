@@ -1,0 +1,7 @@
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.csproj.AssemblyReference.cache
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.AssemblyInfoInputs.cache
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.AssemblyInfo.cs
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.csproj.CoreCompileInputs.cache
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\obj\Release\net7.0\CityInfo.api.MvcApplicationPartsAssemblyInfo.cache

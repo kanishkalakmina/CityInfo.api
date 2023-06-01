@@ -1,0 +1,143 @@
+2023-06-01 23:51:52.841 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-06-01 23:51:53.223 +05:30 [DBG] Entity Framework Core 7.0.5 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.5' with options: None
+2023-06-01 23:51:53.347 +05:30 [DBG] 'CityInfoContext' disposed.
+2023-06-01 23:53:29.323 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-06-01 23:53:29.691 +05:30 [DBG] Entity Framework Core 7.0.5 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.5' with options: None
+2023-06-01 23:53:29.703 +05:30 [DBG] Creating DbConnection.
+2023-06-01 23:53:29.712 +05:30 [DBG] Created DbConnection. (7ms).
+2023-06-01 23:53:29.714 +05:30 [DBG] Migrating using database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.717 +05:30 [DBG] Creating DbConnection.
+2023-06-01 23:53:29.718 +05:30 [DBG] Created DbConnection. (0ms).
+2023-06-01 23:53:29.719 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.723 +05:30 [DBG] An error occurred using the connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.726 +05:30 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.730 +05:30 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (1ms).
+2023-06-01 23:53:29.730 +05:30 [DBG] Creating DbConnection.
+2023-06-01 23:53:29.730 +05:30 [DBG] Created DbConnection. (0ms).
+2023-06-01 23:53:29.730 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.730 +05:30 [DBG] An error occurred using the connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.731 +05:30 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.731 +05:30 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:29.731 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.735 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.738 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:29.743 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (2ms).
+2023-06-01 23:53:29.744 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (6ms).
+2023-06-01 23:53:29.748 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-06-01 23:53:29.773 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-06-01 23:53:29.774 +05:30 [DBG] Closing connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.777 +05:30 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (2ms).
+2023-06-01 23:53:29.821 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:29.821 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:29.821 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:29.821 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.821 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.821 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2023-06-01 23:53:29.830 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2023-06-01 23:53:29.831 +05:30 [DBG] Closing connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.831 +05:30 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:29.831 +05:30 [DBG] Creating DbConnection.
+2023-06-01 23:53:29.831 +05:30 [DBG] Created DbConnection. (0ms).
+2023-06-01 23:53:29.831 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.832 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.832 +05:30 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.832 +05:30 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:29.834 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-06-01 23:53:29.834 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-06-01 23:53:29.834 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-06-01 23:53:29.834 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.834 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.834 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-06-01 23:53:29.836 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-06-01 23:53:29.836 +05:30 [DBG] Closing connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.836 +05:30 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:29.838 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-01 23:53:29.838 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-06-01 23:53:29.838 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-06-01 23:53:29.838 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:29.838 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.838 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-06-01 23:53:29.839 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-06-01 23:53:29.840 +05:30 [DBG] Closing data reader to 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:29.841 +05:30 [DBG] A data reader for 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db' is being disposed after spending 1ms reading results.
+2023-06-01 23:53:30.494 +05:30 [DBG] Closing connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:30.494 +05:30 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:30.502 +05:30 [INF] Applying migration '20230601182153_CityInfoDBInitialMigration'.
+2023-06-01 23:53:30.517 +05:30 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:30.517 +05:30 [DBG] Opened connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:30.518 +05:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-06-01 23:53:30.520 +05:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-06-01 23:53:30.520 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:30.520 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.520 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.520 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Cities" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Cities" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Description" TEXT NOT NULL
+);
+2023-06-01 23:53:30.521 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Cities" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Cities" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Description" TEXT NOT NULL
+);
+2023-06-01 23:53:30.521 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:30.521 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "pointOfIntrest" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_pointOfIntrest" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "CityId" INTEGER NOT NULL,
+    CONSTRAINT "FK_pointOfIntrest_Cities_CityId" FOREIGN KEY ("CityId") REFERENCES "Cities" ("Id") ON DELETE CASCADE
+);
+2023-06-01 23:53:30.521 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "pointOfIntrest" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_pointOfIntrest" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "CityId" INTEGER NOT NULL,
+    CONSTRAINT "FK_pointOfIntrest_Cities_CityId" FOREIGN KEY ("CityId") REFERENCES "Cities" ("Id") ON DELETE CASCADE
+);
+2023-06-01 23:53:30.521 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:30.521 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_pointOfIntrest_CityId" ON "pointOfIntrest" ("CityId");
+2023-06-01 23:53:30.521 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_pointOfIntrest_CityId" ON "pointOfIntrest" ("CityId");
+2023-06-01 23:53:30.521 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-01 23:53:30.521 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-01 23:53:30.521 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230601182153_CityInfoDBInitialMigration', '7.0.5');
+2023-06-01 23:53:30.521 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230601182153_CityInfoDBInitialMigration', '7.0.5');
+2023-06-01 23:53:30.522 +05:30 [DBG] Committing transaction.
+2023-06-01 23:53:30.536 +05:30 [DBG] Committed transaction.
+2023-06-01 23:53:30.538 +05:30 [DBG] Disposing transaction.
+2023-06-01 23:53:30.538 +05:30 [DBG] Closing connection to database 'main' on server 'C:\Users\LakminaEgodawatthaBI\source\repos\CityInfo.api\CityInfo.api\CityInfo.db'.
+2023-06-01 23:53:30.538 +05:30 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-06-01 23:53:30.539 +05:30 [DBG] 'CityInfoContext' disposed.
+2023-06-01 23:53:30.540 +05:30 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-06-01 23:53:30.540 +05:30 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).
