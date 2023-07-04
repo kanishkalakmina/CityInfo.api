@@ -2,6 +2,7 @@
 using CityInfo.api.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CityInfo.api.Migrations
 {
     [DbContext(typeof(CityInfoContext))]
-    partial class CityInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20230704175152_cityInfoDBAddPointOfIntrestDescription")]
+    partial class cityInfoDBAddPointOfIntrestDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");
@@ -35,26 +38,6 @@ namespace CityInfo.api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cities");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "The one with that big park",
-                            Name = "New York City"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "The one with the cathedral that was never really finished",
-                            Name = "Antwerp"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "The one with that big tower",
-                            Name = "Paris"
-                        });
                 });
 
             modelBuilder.Entity("CityInfo.api.Entities.PointOfIntrest", b =>
@@ -81,29 +64,6 @@ namespace CityInfo.api.Migrations
                     b.HasIndex("CityId");
 
                     b.ToTable("pointOfIntrest");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CityId = 1,
-                            Description = "The most visited park in the US",
-                            Name = "central park"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CityId = 1,
-                            Description = "A 102-story skyscraper located in midtown manhattan",
-                            Name = "Empire State Building"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CityId = 2,
-                            Description = "The numaric hellos",
-                            Name = "cathedral"
-                        });
                 });
 
             modelBuilder.Entity("CityInfo.api.Entities.PointOfIntrest", b =>
