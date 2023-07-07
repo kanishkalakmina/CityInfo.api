@@ -99,74 +99,73 @@ namespace CityInfo.api.Controllers
                 return NotFound();
             }
             //find point of intrest
-            var pointOfIntrestFromStore = city.PointOfIntrest.FirstOrDefault(c => c.Id == pointOfIntrestId);
+            var pointOfIntrestEntity = _cityInfoRepository
+                .GetPointOfIntrestForCityAsunc(cityId, pointOfIntrestId);
 
-            if (pointOfIntrestFromStore == null)
+            if (pointOfIntrestEntity == null)
             {
                 return NotFound();
             }
 
-            pointOfIntrestFromStore.Name = pointOfIntrest.Name;
-            pointOfIntrestFromStore.Description = pointOfIntrest.Description;
+            _mapper.Map(pointOfIntrest, pointOfIntrestEntity);
+
+            
 
             return NoContent();
         }
 
         [HttpPatch("pointofintrestid")]
 
-        public ActionResult PartiallyUpdatePointOfIntrest( int cityId, int pointOfIntrestId, JsonPatchDocument<PointOfIntrestForUpdateDto> patchDocument)
+        public async  Task<ActionResult> PartiallyUpdatePointOfIntrest( int cityId, int pointOfIntrestId, JsonPatchDocument<PointOfIntrestForUpdateDto> patchDocument)
         {
-            var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
-            if (city == null)
+            if (!await _cityInfoRepository.CityExistsAsync(cityId))
             {
                 return NotFound();
             }
-            var pointOfIntrestFromStore = city.PointOfIntrest.FirstOrDefault(c => c.Id == pointOfIntrestId);
-
-            if (pointOfIntrestFromStore == null)
+            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsunc(cityId, pointOfIntrestId);
+            if (pointOfIntrestEntity == null)
             {
                 return NotFound();
             }
-
-            var pointOfIntrestToPatch =
-                new PointOfIntrestForUpdateDto()
-                {
-                    Name = pointOfIntrestFromStore.Name,
-                    Description = pointOfIntrestFromStore.Description
-                };
+            var pointOfIntrestToPatch = _mapper.Map<PointOfIntrestForUpdateDto>(
+                pointOfIntrestEntity);
+        
             patchDocument.ApplyTo(pointOfIntrestToPatch, ModelState);
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            pointOfIntrestFromStore.Name = pointOfIntrestToPatch.Name;
-            pointOfIntrestFromStore.Description = pointOfIntrestToPatch.Description;
+            if(!TryValidateModel(pointOfIntrestToPatch))
+            {
+                return BadRequest(ModelState);
+            }
+            _mapper.Map(pointOfIntrestToPatch, pointOfIntrestEntity);
+            await _cityInfoRepository.SaveChangesAsync();
 
             return NoContent();
         }
 
         [HttpDelete("{pointOfIntrestId}")]
 
-        public ActionResult DeletePointOfIntrest( int cityId, int pointOfIntrestId )
+        public async Task<ActionResult> DeletePointOfIntrest( int cityId, int pointOfIntrestId )
         {
-            var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
-            if (city == null)
+            if (!await _cityInfoRepository.CityExistsAsync(cityId))
             {
                 return NotFound();
             }
-            var pointOfIntrestFromStore = city.PointOfIntrest.FirstOrDefault(c => c.Id == pointOfIntrestId);
-
-            if (pointOfIntrestFromStore == null)
+            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsunc(cityId, pointOfIntrestId);
+            if (pointOfIntrestEntity == null)
             {
                 return NotFound();
             }
 
-            city.PointOfIntrest.Remove(pointOfIntrestFromStore);
+            _cityInfoRepository.DeletePointOfIntrest(pointOfIntrestEntity);
+            await _cityInfoRepository.SaveChangesAsync();
+
             _mailService.Send(
                 "Point of intrest deleted.",
-                $"Point of intrest {pointOfIntrestFromStore.Name} with id {pointOfIntrestFromStore.Id} was deleted");
+                $"Point of intrest {pointOfIntrestEntity.Name} with id {pointOfIntrestEntity.Id} was deleted");
             return NoContent();
         }
     }

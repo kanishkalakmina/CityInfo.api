@@ -6,6 +6,9 @@ namespace CityInfo.api.Services
     {
         Task<IEnumerable<City>> GetCitiesAsync();
 
+        Task<(IEnumerable<City>, PaginationMetadata)> GetCitiesAsync(
+            string? name, string? searchQuery, int pageNumber, int pageSize);
+
         Task<City?> GetCityAsync(int cityId, bool includePointOfIntrest);
 
         Task<bool> CityExistsAsync(int cityId);
@@ -16,6 +19,8 @@ namespace CityInfo.api.Services
         Task GetPointsOfIntrestForCityAsunc(int cityId, object pointOfInterestId);
 
         Task AddPointOfInterestForCityAsync(int cityId, PointOfIntrest pointOfIntrest);
+
+        void DeletePointOfInterestForCityAsync(PointOfIntrest pointOfIntrest);
 
         Task <bool> SaveChangesAsync();
     }
