@@ -13,15 +13,18 @@ namespace CityInfo.api.Services
 
         Task<bool> CityExistsAsync(int cityId);
 
-        Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsunc(int cityId, int pointOfIntrestId);
+        Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsync(int cityId, int pointOfIntrestId);
 
-        Task<PointOfIntrest?> GetPointOfIntrestForCityAsunc(int cityId, int pointOfIntrestId);
-        Task GetPointsOfIntrestForCityAsunc(int cityId, object pointOfInterestId);
+        Task<PointOfIntrest?> GetPointOfIntrestForCityAsync(int cityId, int pointOfIntrestId);
+        Task GetPointsOfIntrestForCityAsync(int cityId, object pointOfInterestId);
 
         Task AddPointOfInterestForCityAsync(int cityId, PointOfIntrest pointOfIntrest);
 
         void DeletePointOfInterestForCityAsync(PointOfIntrest pointOfIntrest);
 
+        Task<bool> CityNameMatchesCityId(string? cityName, int cityId);
+
         Task <bool> SaveChangesAsync();
+        Task GetPointOfIntrestForCityAsync(int cityId);
     }
 }

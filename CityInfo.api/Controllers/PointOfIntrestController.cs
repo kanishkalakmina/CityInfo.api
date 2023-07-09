@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CityInfo.api.Models;
 using CityInfo.api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityInfo.api.Controllers
 {
     [Route("api/cities/{cityId}/pointofintrest")]
+    [Authorize(Policy = "MustBeFromAntwerp")]
     [ApiController]
     public class PointOfIntrestController : ControllerBase
     {
@@ -34,6 +36,12 @@ namespace CityInfo.api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PointOfIntrestDto>>> GetPointOfIntrest(int cityId)
         {
+            var cityName = User.Claims.FirstOrDefault(c => c.Type == "city")?.Value;
+
+            if(!await _cityInfoRepository.CityNameMatchesCityId(cityName, cityId))
+            {
+                return Forbid();
+            }
             if(!await _cityInfoRepository.CityExistsAsync(cityId))
             {
                 _logger.LogInformation(
@@ -41,7 +49,7 @@ namespace CityInfo.api.Controllers
                 return NotFound();
             }
             var pointOfIntrestForCity = await _cityInfoRepository
-                .GetPointsOfIntrestForCityAsunc(cityId);
+                .GetPointOfIntrestForCityAsync(cityId);
 
             return Ok(_mapper.Map<IEnumerable<PointOfIntrestDto>>(pointOfIntrestForCity));
         }
@@ -56,7 +64,7 @@ namespace CityInfo.api.Controllers
                 return NotFound();
             }
             var pointOfIntrestForCity = await _cityInfoRepository
-               .GetPointsOfIntrestForCityAsunc(cityId, pointOfInterestId);
+               .GetPointsOfIntrestForCityAsync(cityId, pointOfInterestId);
 
             if(pointOfInterestId == null)
             {
@@ -100,7 +108,7 @@ namespace CityInfo.api.Controllers
             }
             //find point of intrest
             var pointOfIntrestEntity = _cityInfoRepository
-                .GetPointOfIntrestForCityAsunc(cityId, pointOfIntrestId);
+                .GetPointOfIntrestForCityAsync(cityId, pointOfIntrestId);
 
             if (pointOfIntrestEntity == null)
             {
@@ -122,7 +130,7 @@ namespace CityInfo.api.Controllers
             {
                 return NotFound();
             }
-            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsunc(cityId, pointOfIntrestId);
+            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsync(cityId, pointOfIntrestId);
             if (pointOfIntrestEntity == null)
             {
                 return NotFound();
@@ -154,7 +162,7 @@ namespace CityInfo.api.Controllers
             {
                 return NotFound();
             }
-            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsunc(cityId, pointOfIntrestId);
+            var pointOfIntrestEntity = await _cityInfoRepository.GetPointsOfIntrestForCityAsync(cityId, pointOfIntrestId);
             if (pointOfIntrestEntity == null)
             {
                 return NotFound();

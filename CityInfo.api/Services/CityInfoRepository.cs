@@ -57,7 +57,7 @@ namespace CityInfo.api.Services
             return (collectionToReturn, paginationMetadata);
         }
 
-        public async Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsunc(int cityId)
+        public async Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsync(int cityId)
         {
             return await _context.pointOfIntrest.Where(p => p.Id == cityId).ToListAsync();
         }
@@ -68,7 +68,7 @@ namespace CityInfo.api.Services
         }
 
 
-        public async Task<PointOfIntrest?> GetPointOfIntrestForCityAsunc(int cityId, int pointOfIntrestId)
+        public async Task<PointOfIntrest?> GetPointOfIntrestForCityAsync(int cityId, int pointOfIntrestId)
         {
             return await _context.pointOfIntrest.Where(p => p.Id == cityId && p.Id == pointOfIntrestId).FirstOrDefaultAsync();
         }
@@ -92,17 +92,27 @@ namespace CityInfo.api.Services
             return (await _context.SaveChangesAsync() >= 0);
         }
 
-        public Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsunc(int cityId, int pointOfIntrestId)
+        public Task<IEnumerable<PointOfIntrest?>> GetPointsOfIntrestForCityAsync(int cityId, int pointOfIntrestId)
         {
             throw new NotImplementedException();
         }
 
-        public Task GetPointsOfIntrestForCityAsunc(int cityId, object pointOfInterestId)
+        public Task GetPointsOfIntrestForCityAsync(int cityId, object pointOfInterestId)
         {
             throw new NotImplementedException();
         }
 
         public void DeletePointOfInterestForCityAsync(PointOfIntrest pointOfIntrest)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<bool> CityNameMatchesCityId(string? cityName, int cityId)
+        {
+            return await _context.Cities.AllAsync(c => c.Id == cityId && c.Name == cityName);
+        }
+
+        public Task GetPointOfIntrestForCityAsync(int cityId)
         {
             throw new NotImplementedException();
         }
